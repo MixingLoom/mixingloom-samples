@@ -17,12 +17,10 @@ import org.mixingloom.patcher.AbstractPatcher;
 		}
 
 		private function handleTimerComplete( event:TimerEvent ):void {
-			applier.completePatching( this );
+			invokeCallBack();
 		}
 
 		override public function apply( invocationType:InvocationType, swfContext:SwfContext ):void {
-			applier.startPatching( this );
-			
 			timer.reset();
 			timer.start();
 		}

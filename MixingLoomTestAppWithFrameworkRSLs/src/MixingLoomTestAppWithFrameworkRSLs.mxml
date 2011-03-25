@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+<ml:LoomApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:ml="library://ns.mixingloom.org/flex/spark">
 
   
 
 
-</s:Application>
+</ml:LoomApplication>

@@ -8,8 +8,7 @@ import org.mixingloom.preloader.watcher.IPatcherApplier;
 	public class SamplePatcher extends AbstractPatcher {
 
 		override public function apply( invocationType:InvocationType, swfContext:SwfContext ):void {
-			applier.startPatching( this );
-			applier.completePatching( this );
+			invokeCallBack();
 		}
 		
 		public function SamplePatcher() {
