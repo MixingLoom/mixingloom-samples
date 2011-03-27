@@ -105,6 +105,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="RevealPrivatesPatcher" />
   </component>
 </module>
 

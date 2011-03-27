@@ -1,7 +1,18 @@
 <?xml version="1.0"?>
-<ml:LoomApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:ml="library://ns.mixingloom.org/flex/spark">
+<ml:LoomApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                    xmlns:ml="library://ns.mixingloom.org/flex/spark"
+                    xmlns:s="library://ns.adobe.com/flex/spark"
+                    preloader="preloader.RevealPrivatesPatcherPreloader">
 
-  
+  <ml:initialize>
+    trace('init');
+  </ml:initialize>
 
+  <ml:applicationComplete>
+    trace('appComp');
+    this['debugTickler']();
+  </ml:applicationComplete>
+
+  <s:Label text="We are here"/>
 
 </ml:LoomApplication>
