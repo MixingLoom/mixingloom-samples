@@ -4,10 +4,6 @@
                     xmlns:s="library://ns.adobe.com/flex/spark"
                     preloader="preloader.RevealPrivatesPatcherPreloader">
 
-  <ml:initialize>
-    trace('init');
-  </ml:initialize>
-
   <ml:applicationComplete>
     trace('appComp');
     this['debugTickler']();
