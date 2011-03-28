@@ -6,7 +6,7 @@ import org.mixingloom.preloader.AbstractPreloader;
 
 		override protected function setupPatchers():void {
 			super.setupPatchers();
-			//registerPatcher( new RevealPrivatesPatcher(null, "spark.components.Application", "debugTickler") );
+			registerPatcher( new RevealPrivatesPatcher(null, "spark.components.Application", "debugTickler") );
 		}
 
 		public function RevealPrivatesPatcherPreloader() {
