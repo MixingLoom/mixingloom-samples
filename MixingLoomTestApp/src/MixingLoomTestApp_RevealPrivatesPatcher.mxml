@@ -18,4 +18,11 @@
 
 	<s:Label id="l" text="I AM HERE"/>
 
+    <s:Button label="get modified swf" top="30">
+        <s:click>
+            var f:FileReference = new FileReference();
+            f.save(systemManager.info()['modifiedBytes'], "modified.swf");
+        </s:click>
+    </s:Button>
+
 </s:Application>

@@ -3,10 +3,6 @@
                xmlns:s="library://ns.adobe.com/flex/spark"
                preloader="preloader.SamplePatcherPreloader">
 
-  <s:initialize>
-    trace('init');
-  </s:initialize>
-
 	<s:Label id="l" text="I AM HERE"/>
 
 </s:Application>
