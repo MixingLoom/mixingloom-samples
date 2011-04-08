@@ -10,7 +10,12 @@ public class Foo
 {
   private function getPrivateBar():String
   {
-    return "private bar";
+      return "private bar";
+  }
+
+  public function getBar():String
+  {
+      return "bar";
   }
 }
 }

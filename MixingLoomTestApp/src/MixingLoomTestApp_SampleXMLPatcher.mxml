@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               preloader="preloader.SampleXMLPatcherPreloader">
+
+    <fx:Script>
+        import blah.Foo;
+    </fx:Script>
+
+
+	<s:Button label="call foo.getBar()" fontSize="32" top="20" horizontalCenter="0">
+        <s:click>
+            var foo:Foo = new Foo();
+            foo.getBar();
+        </s:click>
+    </s:Button>
+
+</s:Application>
