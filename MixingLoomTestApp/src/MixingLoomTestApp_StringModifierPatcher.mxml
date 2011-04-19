@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               preloader="preloader.StringModifierPatcherPreloader">
+
+  <fx:Script>
+    import blah.Foo;
+  </fx:Script>
+
+  <s:applicationComplete>
+     var foo:Foo = new Foo();
+     l.text = foo.getBar();
+  </s:applicationComplete>
+
+  <s:Label id="l"/>
+
+</s:Application>

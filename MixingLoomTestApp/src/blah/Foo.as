@@ -15,7 +15,7 @@ public class Foo
 
   public function getBar():String
   {
-      return "bar";
+      return "a bar";
   }
 }
 }
