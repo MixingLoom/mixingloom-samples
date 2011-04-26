@@ -11,16 +11,15 @@ import org.mixingloom.patcher.RevealPrivatesPatcher;
 
 public class MyRevealPrivatesPatcher extends RevealPrivatesPatcher {
 
-    public function MyRevealPrivatesPatcher(tagName:String, className:String, propertyOrMethodName:String) {
-        super(tagName, className, propertyOrMethodName);
+    public function MyRevealPrivatesPatcher(className:String, propertyOrMethodName:String) {
+        super(className, propertyOrMethodName);
     }
 
     override public function apply( invocationType:InvocationType, swfContext:SwfContext ):void {
         if ((invocationType.type == InvocationType.RSL) && (invocationType.url.indexOf("spark_") >= 0)) {
             super.apply(invocationType, swfContext);
         }
-        else
-        {
+        else {
             invokeCallBack();
         }
     }

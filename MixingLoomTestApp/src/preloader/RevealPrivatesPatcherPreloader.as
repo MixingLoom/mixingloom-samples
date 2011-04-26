@@ -7,11 +7,8 @@ import org.mixingloom.preloader.AbstractPreloader;
 
 		override protected function setupPatchers(manager:IPatchManager):void {
 			super.setupPatchers(manager);
-			manager.registerPatcher( new RevealPrivatesPatcher("blah/Foo", "blah:Foo", "getPrivateBar") );
+			manager.registerPatcher( new RevealPrivatesPatcher("blah:Foo", "getPrivateBar") );
 		}
 
-		public function RevealPrivatesPatcherPreloader() {
-			super();
-		}
 	}
 }

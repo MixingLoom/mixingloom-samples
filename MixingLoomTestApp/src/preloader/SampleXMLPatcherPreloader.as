@@ -4,8 +4,6 @@ import org.mixingloom.preloader.AbstractPreloader;
 
 import patcher.SampleXMLPatcher;
 
-import FooInterceptor; FooInterceptor;
-
 public class SampleXMLPatcherPreloader extends AbstractPreloader {
 		
 		override protected function setupPatchers(manager:IPatchManager):void {

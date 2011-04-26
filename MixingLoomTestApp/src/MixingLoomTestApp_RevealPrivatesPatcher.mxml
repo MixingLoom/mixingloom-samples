@@ -3,26 +3,19 @@
                xmlns:s="library://ns.adobe.com/flex/spark"
                preloader="preloader.RevealPrivatesPatcherPreloader">
 
-  <fx:Script>
-    import blah.Foo;
-  </fx:Script>
+    <fx:Script>
+        import blah.Foo;
+    </fx:Script>
 
-  <s:applicationComplete>
-     try {
-      var foo:Foo = new Foo();
-      l.text = foo['getPrivateBar']();
-    } catch (error:Error) {
-      trace(error);
-    }
- </s:applicationComplete>
+    <s:applicationComplete>
+            try {
+                var foo:Foo = new Foo();
+                l.text = foo['getPrivateBar']();
+            } catch (error:Error) {
+                l.text = error.message;
+            }
+    </s:applicationComplete>
 
-	<s:Label id="l" text="I AM HERE"/>
-
-    <s:Button label="get modified swf" top="30">
-        <s:click>
-            var f:FileReference = new FileReference();
-            f.save(systemManager.info()['modifiedBytes'], "modified.swf");
-        </s:click>
-    </s:Button>
+    <s:Label id="l"/>
 
 </s:Application>

@@ -2,15 +2,17 @@
 <ml:LoomApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
                     xmlns:ml="library://ns.mixingloom.org/flex/spark"
                     xmlns:s="library://ns.adobe.com/flex/spark"
-                    preloader="preloader.RevealPrivatesPatcherPreloader"
-					scriptTimeLimit="600">
+                    preloader="preloader.RevealPrivatesPatcherPreloader">
 
-  <ml:applicationComplete>
-    trace('appComp');
-    this['debugTickler']();
-    l.text = "Yeah.  We just modified an RSL at runtime.";
-  </ml:applicationComplete>
+    <ml:applicationComplete>
+            try {
+                this['debugTickler']();
+                l.text = "Yeah.  We just modified an RSL at runtime.";
+            } catch (e:Error) {
+                l.text = "booo";
+            }
+    </ml:applicationComplete>
 
-  <s:Label id="l" text="We are here"/>
+    <s:Label id="l" text="nothing happened."/>
 
 </ml:LoomApplication>

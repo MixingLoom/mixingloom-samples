@@ -10,12 +10,9 @@ public class MultiplePatchersPreloader extends AbstractPreloader {
 
     override protected function setupPatchers(manager:IPatchManager):void {
         super.setupPatchers(manager);
-        manager.registerPatcher( new RevealPrivatesPatcher("blah/Foo", "blah:Foo", "getPrivateBar") );
-        manager.registerPatcher( new StringModifierPatcher("blah/Foo", "private bar", "bwahahahaha") );
+        manager.registerPatcher( new RevealPrivatesPatcher("blah:Foo", "getPrivateBar") );
+        manager.registerPatcher( new StringModifierPatcher("private bar", "bwahahahaha") );
     }
-
-    public function MultiplePatchersPreloader() {
-        super();
-    }
+    
 }
 }

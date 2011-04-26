@@ -6,7 +6,6 @@
  */
 package
 {
-import mx.controls.Alert;
 import mx.core.FlexGlobals;
 
 public class FooInterceptor

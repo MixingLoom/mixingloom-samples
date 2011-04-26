@@ -1,10 +1,6 @@
 <interceptors>
     <interceptor>
-        <swfTags>
-            <swfTag>blah/Foo</swfTag>
-        </swfTags>
-        <classes>*</classes>
-        <methods>*</methods>
+        <swfTag>blah/Foo</swfTag>
         <methodEntryInvoker>
             <className>FooInterceptor</className>
             <methodName>interceptAll</methodName>
